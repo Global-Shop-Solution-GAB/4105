@@ -1,0 +1,675 @@
+Program.Sub.ScreenSU.Start
+gui.F_Distributors..create
+gui.F_Distributors..caption("Distributors")
+gui.F_Distributors..size(9600,6375)
+gui.F_Distributors..position(0,0)
+gui.F_Distributors..event(unload,f_distributors_unload)
+gui.F_Distributors..alwaysontop(False)
+gui.F_Distributors..fontname("Arial")
+gui.F_Distributors..fontsize(8)
+gui.F_Distributors..forecolor(0)
+gui.F_Distributors..fontstyle(,,,,)
+gui.F_Distributors..BackColor(-2147483633)
+gui.F_Distributors..controlbox(True)
+gui.F_Distributors..maxbutton(True)
+gui.F_Distributors..minbutton(True)
+gui.F_Distributors..mousepointer(0)
+gui.F_Distributors..moveable(True)
+gui.F_Distributors..sizeable(False)
+gui.F_Distributors..ShowInTaskBar(True)
+gui.F_Distributors..titlebar(True)
+gui.F_Distributors.gsfx_distributors.create(gsflexgrid)
+gui.F_Distributors.gsfx_distributors.FixedRows(0)
+gui.F_Distributors.gsfx_distributors.FixedCols(0)
+gui.F_Distributors.gsfx_distributors.visible(True)
+gui.F_Distributors.gsfx_distributors.size(9060,5505)
+gui.F_Distributors.gsfx_distributors.zorder(0)
+gui.F_Distributors.gsfx_distributors.position(200,200)
+gui.F_Distributors.gsfx_distributors.enabled(True)
+gui.F_Distributors.gsfx_distributors.event(commandclick,gsfx_distributors_commandclick)
+
+
+gui.F_Date..create
+gui.F_Date..caption("Date Selection")
+gui.F_Date..size(2775,1815)
+gui.F_Date..position(0,0)
+gui.F_Date..event(unload,f_date_unload)
+gui.F_Date..alwaysontop(False)
+gui.F_Date..fontname("Arial")
+gui.F_Date..fontsize(8)
+gui.F_Date..forecolor(0)
+gui.F_Date..fontstyle(,,,,)
+gui.F_Date..BackColor(-2147483633)
+gui.F_Date..controlbox(True)
+gui.F_Date..maxbutton(True)
+gui.F_Date..minbutton(True)
+gui.F_Date..mousepointer(0)
+gui.F_Date..moveable(True)
+gui.F_Date..sizeable(False)
+gui.F_Date..ShowInTaskBar(True)
+gui.F_Date..titlebar(True)
+gui.F_Date.dtp_date.create(datepicker)
+gui.F_Date.dtp_date.visible(True)
+gui.F_Date.dtp_date.size(2040,315)
+gui.F_Date.dtp_date.zorder(0)
+gui.F_Date.dtp_date.position(300,300)
+gui.F_Date.dtp_date.enabled(True)
+gui.F_Date.dtp_date.checkbox(False)
+gui.F_Date.cmd_Select.create(button)
+gui.F_Date.cmd_Select.caption("Select")
+gui.F_Date.cmd_Select.visible(True)
+gui.F_Date.cmd_Select.size(1000,375)
+gui.F_Date.cmd_Select.zorder(0)
+gui.F_Date.cmd_Select.position(700,700)
+gui.F_Date.cmd_Select.enabled(True)
+gui.F_Date.cmd_Select.fontname("Arial")
+gui.F_Date.cmd_Select.fontsize(8)
+gui.F_Date.cmd_Select.event(click,cmd_select_click)
+
+
+gui.F_Invoices..create
+gui.F_Invoices..caption("Invoices")
+gui.F_Invoices..size(9600,6375)
+gui.F_Invoices..position(0,0)
+gui.F_Invoices..event(unload,f_invoices_unload)
+gui.F_Invoices..alwaysontop(False)
+gui.F_Invoices..fontname("Arial")
+gui.F_Invoices..fontsize(8)
+gui.F_Invoices..forecolor(0)
+gui.F_Invoices..fontstyle(,,,,)
+gui.F_Invoices..BackColor(-2147483633)
+gui.F_Invoices..controlbox(True)
+gui.F_Invoices..maxbutton(True)
+gui.F_Invoices..minbutton(True)
+gui.F_Invoices..mousepointer(0)
+gui.F_Invoices..moveable(True)
+gui.F_Invoices..sizeable(False)
+gui.F_Invoices..ShowInTaskBar(True)
+gui.F_Invoices..titlebar(True)
+gui.F_Invoices.gsfx_invoices.create(gsflexgrid)
+gui.F_Invoices.gsfx_invoices.FixedRows(0)
+gui.F_Invoices.gsfx_invoices.FixedCols(0)
+gui.F_Invoices.gsfx_invoices.visible(True)
+gui.F_Invoices.gsfx_invoices.size(9090,4440)
+gui.F_Invoices.gsfx_invoices.zorder(0)
+gui.F_Invoices.gsfx_invoices.position(200,830)
+gui.F_Invoices.gsfx_invoices.enabled(True)
+gui.F_Invoices.cmd_email.create(button)
+gui.F_Invoices.cmd_email.caption("Email")
+gui.F_Invoices.cmd_email.visible(True)
+gui.F_Invoices.cmd_email.size(1000,375)
+gui.F_Invoices.cmd_email.zorder(0)
+gui.F_Invoices.cmd_email.position(200,5400)
+gui.F_Invoices.cmd_email.enabled(True)
+gui.F_Invoices.cmd_email.fontname("Arial")
+gui.F_Invoices.cmd_email.fontsize(8)
+gui.F_Invoices.cmd_email.event(click,cmd_email_click)
+gui.F_Invoices.lbl_distributor.create(label,"Distributor:",True,4230,255,1,1900,200,True,0,Arial,8,-2147483633,0)
+gui.F_Invoices.lbl_date.create(label,"Week of:",True,2700,255,1,6535,200,True,0,Arial,8,-2147483633,0)
+gui.F_Invoices.lbl_ID.create(label,"ID:",True,1935,255,1,200,200,True,0,Arial,8,-2147483633,0)
+gui.F_Invoices.lbl_Fax.create(label,"Fax:",True,1935,255,1,200,500,True,0,Arial,8,-2147483633,0)
+gui.F_Invoices.lbl_Email.create(label,"Email:",True,3435,255,1,1900,500,True,0,Arial,8,-2147483633,0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Coded by: Melinda Keyes
+'Project Start Date: 11/9/2011
+'Quote: 3054
+'Notes:
+'  A program will be created that will allow the user to search for invoiced distributors by week.
+'  The user will then have the option to email these distributors.
+'
+'  A custom menu item will be created that will prompt the user to select a date.
+'  The program will search for all distributors invoiced that week (Monday - Sunday)
+'  and display a list of the distributor IDs and names in a flex grid.
+'  A "Get Invoices" button will be added to each line of the flex grid and,
+'  when clicked, will open a new screen (synchronously) which will
+'  display the distributor ID number, name, fax number, email address, and invoices for that week.
+'  The user will then be able to click an "Email" button which will generate a message as follows:
+'
+'  Dear Accounts Payable,
+'
+'  For the week of ________________, we have invoiced your account the following invoices.
+'  Please review the list and if you have not received all of the invoices,
+'  please contact us at 563-391-6220, Marsha LaRue x105 or Chris Wales x128.
+'  You can also email either Marsha (mlarue@maford.com) or Chris (cwales@maford.com) for copies that you need.
+'
+'  Thank you for your business.
+'
+'  M.A. Ford Mfg. Co., Inc.
+'
+'  The program should populate the blank with the appropriate date
+'  and display a list of the invoices that were invoiced that week along with Invoice #, Date, Dollar amount, and PO#.
+
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Global.sDateStart.Declare(String)
+V.Global.sDateEnd.Declare(String)
+V.Global.dateStart.Declare(Date)
+V.Global.dateEnd.Declare(Date)
+V.Local.sError.Declare(String)
+V.Local.iEmailMode.Declare(Long)
+
+F.Global.Messaging.IsCourierRunning(V.Local.iEmailMode)
+F.Intrinsic.Control.If(V.Local.iEmailMode,=,0)
+	F.Intrinsic.UI.Msgbox("Please ensure Courier.exe is running before using this program.")
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+'set up the build styles for the flex grids
+F.Intrinsic.Control.CallSub(Format_distributors)
+F.Intrinsic.Control.CallSub(Format_invoices)
+
+Gui.F_Date..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+program.sub.f_distributors_unload.start
+F.Intrinsic.Control.SetErrorHandler("f_distributors_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.F_Distributors..Visible(false)
+Gui.F_Date..Visible(true)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("f_distributors_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.f_distributors_unload.end
+
+program.sub.gsfx_distributors_commandclick.start
+F.Intrinsic.Control.SetErrorHandler("gsfx_distributors_commandclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sDateArr.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sCust.Declare(String)
+V.Local.sFax.Declare(String)
+V.Local.sEmail.Declare(String)
+V.Local.sName.Declare(String)
+V.Local.sWeek.Declare(String)
+V.Local.sDate.Declare(String)
+V.Local.sAmount.Declare(String)
+V.Local.sPO.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iCol.Declare(Long)
+V.Local.iRow.Declare(Long)
+V.Local.iRows.Declare(Long)
+
+'clear the invoice grid
+Gui.F_Invoices.gsfx_invoices.Rows(1)
+
+'get the customer information from the distributor grid
+Gui.F_Distributors.gsfx_distributors.GetTextMatrix(0,V.Args.Key,V.Local.sCust)
+Gui.F_Distributors.gsfx_distributors.GetTextMatrix(1,V.Args.key,V.Local.sName)
+Gui.F_Distributors.gsfx_distributors.GetTextMatrix(2,V.Args.key,V.Local.sEmail)
+Gui.F_Distributors.gsfx_distributors.GetTextMatrix(3,V.Args.key,V.Local.sFax)
+
+'clear label headers
+Gui.F_Invoices.lbl_date.Caption("")
+Gui.F_Invoices.lbl_distributor.Caption("")
+Gui.F_Invoices.lbl_Email.Caption("")
+Gui.F_Invoices.lbl_Fax.Caption("")
+Gui.F_Invoices.lbl_ID.Caption("")
+
+'get the list of all dates for that week
+F.Intrinsic.Control.CallSub(Get_date_list,"dStart",V.Global.dateStart,"dEnd",V.Global.dateEnd)
+V.Local.sDateArr.Set(V.Args.sDateArr)
+F.Intrinsic.String.Split(V.Local.sDateArr,"*!*",V.Local.sDateArr)
+
+'format the list of dates and construct a query
+F.Intrinsic.String.Concat("SELECT * FROM AR_OPEN_ITEMS WHERE CUSTOMER = '",V.Local.sCust,"' AND (",V.Local.sQuery)
+F.Intrinsic.Control.CallSub(Format_date,"dDate",V.Local.sDateArr(0))
+F.Intrinsic.String.Concat(V.Local.sQuery,"DATE_INVOICE = '",V.Args.sDate,"' ",V.Local.sQuery)
+F.Intrinsic.Control.For(V.Local.iC,1,6,1)
+	F.Intrinsic.Control.CallSub(Format_date,"dDate",V.Local.sDateArr(V.Local.iC))
+	F.Intrinsic.String.Concat(V.Local.sQuery,"OR DATE_INVOICE = '",V.Args.sDate,"' ",V.Local.sQuery)
+F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.String.Concat(V.Local.sQuery,") ORDER BY INVOICE",V.Local.sQuery)
+
+F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sQuery)
+F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+	V.Local.iRow.Set(V.Screen.F_Invoices!gsfx_Invoices.Rows)
+	F.Intrinsic.Math.Add(V.Local.iRow,1,V.Local.iRows)
+	Gui.F_Invoices.gsfx_Invoices.Rows(V.Local.iRows)
+	Gui.F_Invoices.gsfx_invoices.TextMatrix(1,V.Local.iRow,V.ODBC.conX!rst.FieldVal!INVOICE)
+	V.Local.sDate.Set(V.ODBC.conX!rst.FieldVal!DATE_INVOICE)
+	F.Intrinsic.String.LimitSplit(V.Local.sDate,2,V.Local.sDate)
+	F.Intrinsic.String.Concat(V.Local.sDate(0),"/",V.Local.sDate(1),"/",V.Local.sDate(2),V.Local.sDate)
+	Gui.F_Invoices.gsfx_invoices.TextMatrix(2,V.Local.iRow,V.Local.sDate)
+	F.Intrinsic.String.Format(V.ODBC.conX!rst.FieldValFloat!AMT_INVOICE,"$############.00",V.Local.sAmount)
+	Gui.F_Invoices.gsfx_invoices.TextMatrix(3,V.Local.iRow,V.Local.sAmount)
+	F.Intrinsic.String.Concat(V.ODBC.conX!rst.FieldVal!ORDER_NO,"-",V.ODBC.conX!rst.FieldVal!ORDER_SUFFIX,V.Local.sPO)
+	Gui.F_Invoices.gsfx_invoices.TextMatrix(4,V.Local.iRow,V.Local.sPO)
+	Gui.F_Invoices.gsfx_invoices.ApplyStyle(V.Local.iRow,2)
+	F.ODBC.conX!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conX!rst.Close
+
+Gui.F_Invoices.gsfx_invoices.FixedRows(1)
+
+'set header captions
+F.Intrinsic.String.Concat("Distributor: ",V.Local.sName,V.Local.sName)
+F.Intrinsic.String.Concat("ID: ",V.Local.sCust,V.Local.sCust)
+F.Intrinsic.String.Concat("Email: ",V.Local.sEmail,V.Local.sEmail)
+F.Intrinsic.String.Concat("Fax: ",V.Local.sFax,V.Local.sFax)
+F.Intrinsic.String.Concat("Week of ",V.Global.dateStart," to ",V.Global.dateEnd,V.Local.sWeek)
+Gui.F_Invoices.lbl_date.Caption(V.Local.sWeek)
+Gui.F_Invoices.lbl_distributor.Caption(V.Local.sName)
+Gui.F_Invoices.lbl_Email.Caption(V.Local.sEmail)
+Gui.F_Invoices.lbl_Fax.Caption(V.Local.sFax)
+Gui.F_Invoices.lbl_ID.Caption(V.Local.sCust)
+
+Gui.F_Distributors..Visible(false)
+Gui.F_Invoices..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfx_distributors_commandclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.gsfx_distributors_commandclick.end
+
+program.sub.f_date_unload.start
+F.Intrinsic.Control.SetErrorHandler("f_date_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conX.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("f_date_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.f_date_unload.end
+
+program.sub.cmd_select_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_select_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sDateStart.Declare(String)
+V.Local.sDateEnd.Declare(String)
+V.Local.sFax.Declare(String)
+V.Local.dDate.Declare(Date)
+V.Local.dWeekStart.Declare(Date)
+V.Local.dWeekEnd.Declare(Date)
+V.Local.sDateArr.Declare(String)
+V.Local.iLen.Declare(Long)
+V.Local.iC.Declare(Long)
+V.Local.iRow.Declare(Long)
+V.Local.iRows.Declare(Long)
+
+'clear the distributors flexgrid
+Gui.F_Distributors.gsfx_distributors.Rows(1)
+
+'Get and format the beginning and ending dates for the selected week (Monday-Sunday)
+V.Local.dDate.Set(V.Screen.F_Date!dtp_date.Value)
+
+F.Intrinsic.Date.BeginningOfWeek(V.Local.dDate,V.Local.dWeekStart)
+F.Intrinsic.Date.DateAdd("D",7,V.Local.dWeekStart,V.Local.dWeekEnd)
+F.Intrinsic.Date.DateAdd("D",1,V.Local.dWeekStart,V.Local.dWeekStart)
+
+'set the dates so they can be used by later modules
+V.Global.dateStart.Set(V.Local.dWeekStart)
+V.Global.dateEnd.Set(V.Local.dWeekEnd)
+
+'get the list of all dates for that week
+F.Intrinsic.Control.CallSub(Get_date_list,"dStart",V.Local.dWeekStart,"dEnd",V.Local.dWeekEnd)
+V.Local.sDateArr.Set(V.Args.sDateArr)
+F.Intrinsic.String.Split(V.Local.sDateArr,"*!*",V.Local.sDateArr)
+
+'format the list of dates and construct a query
+V.Local.sQuery.Set("SELECT DISTINCT CUSTOMER FROM AR_OPEN_ITEMS WHERE ")
+F.Intrinsic.Control.CallSub(Format_date,"dDate",V.Local.sDateArr(0))
+F.Intrinsic.String.Concat(V.Local.sQuery,"DATE_INVOICE = '",V.Args.sDate,"' ",V.Local.sQuery)
+F.Intrinsic.Control.For(V.Local.iC,1,6,1)
+	F.Intrinsic.Control.CallSub(Format_date,"dDate",V.Local.sDateArr(V.Local.iC))
+	F.Intrinsic.String.Concat(V.Local.sQuery,"OR DATE_INVOICE = '",V.Args.sDate,"' ",V.Local.sQuery)
+F.Intrinsic.Control.Next(V.Local.iC)
+
+'Select all customers that were invoiced between the two specified dates and list the customer information in the flexgrid
+F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conX!rst.EOF,=,True)
+	F.Intrinsic.UI.Msgbox("No customers were invoiced during the selected week.")
+	F.ODBC.conX!rst.Close
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+	F.Intrinsic.String.Concat("SELECT * FROM CUSTOMER_MASTER WHERE CUSTOMER = '",V.ODBC.conX!rst.FieldVal!CUSTOMER,"' ORDER BY REC",V.Local.sQuery)
+	F.ODBC.Connection!conX.OpenRecordsetRO("rstCust",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.conX!rstCust.EOF,<>,True)
+		'add a new row for the company
+		V.Local.iRow.Set(V.Screen.F_Distributors!gsfx_distributors.Rows)
+		F.Intrinsic.Math.Add(V.Local.iRow,1,V.Local.iRows)
+		Gui.F_Distributors.gsfx_distributors.Rows(V.Local.iRows)
+		Gui.F_Distributors.gsfx_distributors.TextMatrix(0,V.Local.iRow,V.ODBC.conX!rstCust.FieldValTrim!CUSTOMER)
+		Gui.F_Distributors.gsfx_distributors.TextMatrix(1,V.Local.iRow,V.ODBC.conX!rstCust.FieldValTrim!NAME_CUSTOMER)
+		F.ODBC.conX!rstCust.MoveNext
+		V.Local.sFax.Set(V.ODBC.conX!rstCust.FieldValTrim!ATTENTION)
+		F.Intrinsic.String.LimitSplit(V.Local.sFax,1,V.Local.sFax)
+
+		F.Intrinsic.Control.If(V.Local.sFax.UBound,<>,10)
+			F.Intrinsic.String.Concat(V.Local.sFax(0),V.Local.sFax(1),V.Local.sFax(2),"-",V.Local.sFax(3),V.Local.sFax(4),V.Local.sFax(5),"-",V.Local.sFax(6),V.Local.sFax(7),V.Local.sFax(8),V.Local.sFax(9),V.Local.sFax)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat(V.Local.sFax(0),"-",V.Local.sFax(1),V.Local.sFax(2),V.Local.sFax(3),"-",V.Local.sFax(4),V.Local.sFax(5),V.Local.sFax(6),"-",V.Local.sFax(7),V.Local.sFax(8),V.Local.sFax(9),V.Local.sFax(10),V.Local.sFax)
+		F.Intrinsic.Control.EndIf
+
+		Gui.F_Distributors.gsfx_distributors.TextMatrix(3,V.Local.iRow,V.Local.sFax)
+
+		F.Intrinsic.String.Concat("SELECT CUST_NO, NAME, FAX, CO_EMAILID FROM CUST_MAST_AUX WHERE CUST_NO = '",V.ODBC.conX!rst.FieldVal!CUSTOMER,"'ORDER BY CUST_NO",V.Local.sQuery)
+		F.ODBC.Connection!conX.OpenRecordsetRO("rstCust2",V.Local.sQuery)
+		F.Intrinsic.Control.If(V.ODBC.conX!rstCust.EOF,<>,True)
+			Gui.F_Distributors.gsfx_distributors.TextMatrix(2,V.Local.iRow,V.ODBC.conX!rstCust2.FieldValTrim!CO_EMAILID)
+		F.Intrinsic.Control.Else
+			Gui.F_Distributors.gsfx_distributors.TextMatrix(2,V.Local.iRow,"No Email")
+		F.Intrinsic.Control.EndIf
+		Gui.F_Distributors.gsfx_distributors.ApplyStyle(V.Local.iRow,2)
+		F.ODBC.conX!rstCust2.Close
+	F.Intrinsic.Control.EndIf
+
+	F.ODBC.conX!rstCust.Close
+	F.ODBC.conX!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conX!rst.Close
+
+Gui.F_Distributors.gsfx_distributors.FixedRows(1)
+
+Gui.F_Date..Visible(false)
+Gui.F_Distributors..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_select_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmd_select_click.end
+
+program.sub.cmd_email_click.start
+'  The user will then be able to click an "Email" button which will generate a message as follows:
+'
+'  Dear Accounts Payable,
+'
+'  For the week of ________________, we have invoiced your account the following invoices.
+'  Please review the list and if you have not received all of the invoices,
+'  please contact us at 563-391-6220, Marsha LaRue x105 or Chris Wales x128.
+'  You can also email either Marsha (mlarue@maford.com) or Chris (cwales@maford.com) for copies that you need.
+'
+'  Thank you for your business.
+'
+'  M.A. Ford Mfg. Co., Inc.
+'
+'  The program should populate the blank with the appropriate date
+'  and display a list of the invoices that were invoiced that week along with Invoice #, Date, Dollar amount, and PO#.
+
+F.Intrinsic.Control.SetErrorHandler("cmd_email_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sCustEmail.Declare(String)
+V.Local.sUser.Declare(String)
+V.Local.sSenderEmail.Declare(String)
+V.Local.sMessage.Declare(String)
+V.Local.sCustomer.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.sRow.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iRow.Declare(Long)
+V.Local.iRows.Declare(Long)
+
+V.Local.sCustEmail.Set(V.Screen.F_Invoices!lbl_Email.Caption)
+F.Intrinsic.String.Replace(V.Local.sCustEmail,"Email: ","",V.Local.sCustEmail)
+V.Local.sCustomer.Set(V.Screen.F_Invoices!lbl_distributor.Caption)
+F.Intrinsic.String.Replace(V.Local.sCustomer,"Distributor: ","",V.Local.sCustomer)
+F.Global.Security.GetUserEmail(V.Caller.User,V.Caller.CompanyCode,V.Local.sSenderEmail)
+F.Global.Security.GetFullName(V.Caller.User,V.Caller.CompanyCode,V.Local.sUser)
+V.Local.sMessage.Set(V.Screen.F_Invoices!lbl_date.Caption)
+F.Intrinsic.String.Replace(V.Local.sMessage,"Week","week",V.Local.sMessage)
+
+F.Intrinsic.String.Concat("Dear Accounts Payable,",V.Ambient.NewLine,V.Ambient.NewLine,"For the ",V.Local.sMessage,", we have invoiced your account the following invoices.",V.Ambient.NewLine,V.Local.sMessage)
+F.Intrinsic.String.Concat(V.Local.sMessage,"Please review the list and if you have not received all of the invoices, please contact us at 563-391-6220, Marsha LaRue x105 or Chris Wales x128.",V.Ambient.NewLine,V.Local.sMessage)
+F.Intrinsic.String.Concat(V.Local.sMessage,"You can also email either Marsha (mlarue@maford.com) or Chris (cwales@maford.com) for copies that you need.",V.Ambient.NewLine,V.Ambient.NewLine,V.Local.sMessage)
+F.Intrinsic.String.Concat(V.Local.sMessage,"Thank you for your business.",V.Ambient.NewLine,V.Ambient.NewLine,"M.A. Ford Mfg. Co., Inc.",V.Ambient.NewLine,V.Ambient.NewLine,V.Local.sMessage)
+F.Intrinsic.String.Concat(V.Local.sMessage,"Invoice",V.Ambient.Tab,V.Ambient.Tab,"Date",V.Ambient.Tab,V.Ambient.Tab,"Amount",V.Ambient.Tab,V.Ambient.Tab,"Purchase Order #",V.Ambient.NewLine,V.Local.sMessage)
+
+V.Local.iRows.Set(V.Screen.F_Invoices!gsfx_invoices.Rows)
+F.Intrinsic.Math.sub(V.Local.iRows,1,V.Local.iRows)
+F.Intrinsic.Control.For(V.Local.iC,1,V.Local.iRows,1)
+	V.Local.iRow.Set(V.Local.iC)
+	Gui.F_Invoices.gsfx_invoices.ReadRow(V.Local.iRow,V.Local.sRow)
+	F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sTemp)
+	'if the user checked the invoice to be included in the email
+	F.Intrinsic.Control.If(V.Local.sTemp(0),=,1)
+		F.Intrinsic.String.Concat(V.Local.sMessage,V.Local.sTemp(1),V.Ambient.Tab,V.Ambient.Tab,V.Local.sTemp(2),V.Ambient.Tab,V.Local.sTemp(3),V.Ambient.Tab,V.Ambient.Tab,V.Local.sTemp(4),V.Ambient.NewLine,V.Local.sMessage)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+
+'F.Intrinsic.String.Concat(V.Local.sSenderEmail,"*!*",V.Caller.User,V.Local.sSenderEmail)
+'Function.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Caller.User,"ATG_INVOICE_NOTICE.gas","Weekly Notice of Invoices",V.Local.sSenderEmail,V.Local.sCustEmail,V.Local.sMessage)
+F.Global.Messaging.CreateEMMessage(V.Local.sCustEmail,V.Local.sCustomer,V.Local.sSenderEmail,V.Local.sUser,"Weekly Notice of Invoices",V.Local.sMessage)
+F.Intrinsic.String.Concat("Email sent to ",V.Local.sCustEmail,V.Local.sTemp)
+F.Intrinsic.UI.Msgbox(V.Local.sTemp)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_email_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmd_email_click.end
+
+program.sub.f_invoices_unload.start
+F.Intrinsic.Control.SetErrorHandler("f_invoices_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.F_Invoices..Visible(false)
+Gui.F_Distributors..Visible(true)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("f_invoices_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+program.sub.f_invoices_unload.end
+
+Program.Sub.format_distributors.Start
+F.Intrinsic.Control.SetErrorHandler("format_distributors_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRow.Declare(Long)
+V.Local.iCol.Declare(Long)
+V.Local.iC.Declare(Long)
+
+Gui.F_Distributors.gsfx_distributors.Cols(5)
+Gui.F_Distributors.gsfx_distributors.Rows(1)
+
+Gui.F_Distributors.gsfx_distributors.TextMatrix(0,0,"ID")
+Gui.F_Distributors.gsfx_distributors.TextMatrix(1,0,"Name")
+Gui.F_Distributors.gsfx_distributors.TextMatrix(2,0,"Email")
+Gui.F_Distributors.gsfx_distributors.TextMatrix(3,0,"Fax")
+Gui.F_Distributors.gsfx_distributors.TextMatrix(4,0,"View Invoices")
+
+F.Intrinsic.Control.For(V.Local.iC,0,4,1)
+	Gui.F_Distributors.gsfx_distributors.BuildStyle(1,V.Local.iC,"Format","Alignment",4)
+	Gui.F_Distributors.gsfx_distributors.BuildStyle(1,V.Local.iC,"Type","Locked",True)
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.For(V.Local.iC,0,3,1)
+	Gui.F_Distributors.gsfx_distributors.BuildStyle(2,V.Local.iC,"Format","Alignment",2)
+	Gui.F_Distributors.gsfx_distributors.BuildStyle(2,V.Local.iC,"Type","Locked",True)
+F.Intrinsic.Control.Next(V.Local.iC)
+Gui.F_Distributors.gsfx_distributors.BuildStyle(2,4,"Format","Alignment",4)
+Gui.F_Distributors.gsfx_distributors.BuildStyle(2,4,"Type","Command","Get Invoices")
+
+Gui.F_Distributors.gsfx_distributors.ApplyStyle(0,1)
+Gui.F_Distributors.gsfx_distributors.SetColumnPercentages(".15:.30:.20:.15:.20")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("format_distributors_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.format_distributors.End
+
+Program.Sub.format_invoices.Start
+F.Intrinsic.Control.SetErrorHandler("format_invoices_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRow.Declare(Long)
+V.Local.iCol.Declare(Long)
+V.Local.iC.Declare(Long)
+
+Gui.F_Invoices.gsfx_invoices.Cols(5)
+Gui.F_Invoices.gsfx_invoices.Rows(1)
+
+Gui.F_Invoices.gsfx_invoices.TextMatrix(0,0,"Email")
+Gui.F_Invoices.gsfx_invoices.TextMatrix(1,0,"Invoice #")
+Gui.F_Invoices.gsfx_invoices.TextMatrix(2,0,"Date")
+Gui.F_Invoices.gsfx_invoices.TextMatrix(3,0,"Amount")
+Gui.F_Invoices.gsfx_invoices.TextMatrix(4,0,"PO #")
+
+F.Intrinsic.Control.For(V.Local.iC,0,4,1)
+	Gui.F_Invoices.gsfx_invoices.BuildStyle(1,V.Local.iC,"Format","Alignment",4)
+	Gui.F_Invoices.gsfx_invoices.BuildStyle(1,V.Local.iC,"Type","Locked",True)
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.For(V.Local.iC,1,4,1)
+	Gui.F_Invoices.gsfx_invoices.BuildStyle(2,V.Local.iC,"Format","Alignment",2)
+	Gui.F_Invoices.gsfx_invoices.BuildStyle(2,V.Local.iC,"Type","Locked",True)
+F.Intrinsic.Control.Next(V.Local.iC)
+Gui.F_Invoices.gsfx_invoices.BuildStyle(2,0,"Format","Alignment",4)
+Gui.F_Invoices.gsfx_invoices.BuildStyle(2,0,"Type","Checkbox",True)
+
+Gui.F_Invoices.gsfx_invoices.ApplyStyle(0,1)
+Gui.F_Invoices.gsfx_invoices.SetColumnPercentages(".10:.25:.20:.20:.25")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("format_invoices_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.format_invoices.End
+
+Program.Sub.get_date_list.Start
+F.Intrinsic.Control.SetErrorHandler("get_date_list_Err")
+F.Intrinsic.Control.ClearErrors
+
+'list all valid dates that make up the week selected
+
+V.Local.sError.Declare(String)
+V.Local.sDateArr.Declare(String)
+V.Local.dStart.Declare(Date)
+V.Local.dEnd.Declare(Date)
+V.Local.iLen.Declare(Long)
+
+V.Local.dStart.Set(V.Args.dStart)
+V.Local.dEnd.Set(V.Args.dEnd)
+
+F.Intrinsic.Control.DoUntil(V.Local.dStart,=,V.Local.dEnd)
+	F.Intrinsic.String.Concat(V.Local.sDateArr,V.Local.dStart,"*!*",V.Local.sDateArr)
+	F.Intrinsic.Date.DateAdd("D",1,V.Local.dStart,V.Local.dStart)
+F.Intrinsic.Control.Loop
+
+F.Intrinsic.String.Concat(V.Local.sDateArr,V.Local.dEnd,V.Local.sDateArr)
+
+F.Intrinsic.Variable.AddRV("sDateArr",V.Local.sDateArr)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("get_date_list_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.get_date_list.End
+
+Program.Sub.format_date.Start
+F.Intrinsic.Control.SetErrorHandler("format_date_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.dDate.Declare(Date)
+V.Local.sDate.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iLen.Declare(Long)
+
+V.Local.dDate.Set(V.Args.dDate)
+
+F.Intrinsic.String.Split(V.Local.dDate,"/",V.Local.sDate)
+
+F.Intrinsic.Control.For(V.Local.iC,0,1,1)
+	F.Intrinsic.String.Len(V.Local.sDate(V.Local.iC),V.Local.iLen)
+	F.Intrinsic.Control.If(V.Local.iLen,=,1)
+		F.Intrinsic.String.Concat("0",V.Local.sDate(V.Local.iC),V.Local.sDate(V.Local.iC))
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.String.Right(V.Local.sDate(2),2,V.Local.sDate(2))
+F.Intrinsic.String.Concat(V.Local.sDate(0),V.Local.sDate(1),V.Local.sDate(2),V.Local.sDate)
+
+F.Intrinsic.Variable.AddRV("sDate",V.Local.sDate)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("format_date_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_4105_Invoice_Notice.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.format_date.End
+
+
